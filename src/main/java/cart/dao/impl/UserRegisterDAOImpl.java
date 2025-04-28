@@ -19,7 +19,7 @@ public class UserRegisterDAOImpl extends BaseDao implements UserRegisterDAO {
 			pstmt.setString(4, user.getEmail());
 			
 			int rowcount = pstmt.executeUpdate(); // 執行更新
-			return rowcount; // 若 rowcount = 1 表示新增一筆成功
+			return rowcount; // 若 rowcount = 1 表是新增一筆成功
 			
 		} catch (SQLException e) {
 			e.printStackTrace();
