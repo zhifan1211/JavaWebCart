@@ -38,7 +38,7 @@ public class AuthCodeServlet extends HttpServlet {
 		String authcode = generateAuthCode();
 		// 將 Authcode 存入到 HttpSession 屬性中
 		HttpSession session = req.getSession();
-		session.setAttribute("authcode", session);
+		session.setAttribute("authcode", authcode);
 		
 		ImageIO.write(getAuthCodeImage(authcode), "JPEG", resp.getOutputStream());
 	}
